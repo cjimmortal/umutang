@@ -1,0 +1,135 @@
+.loans-table{
+    width:100%;
+}
+.umutang-data{
+    width:100%;
+    display:flex;
+    padding:1rem 0 0 0;
+    
+}
+
+.loans-loans{
+    height: 80vh;
+}
+
+.d-loans-content{
+    background-color:white;
+    border: solid #80808026 1px;
+    height: 100%;
+    max-height: 75vh;
+    
+}
+.loans-title-2{
+    font-size:15px;
+    padding: 1.5rem 0 1rem 1rem;
+    border-bottom: solid #DBD5D5 1px;
+}
+.loans-table td{
+  padding:0.4rem 0 0.4rem 2rem;
+  font-size:12px;
+  border-bottom: solid #80808026 1px;
+  
+}
+.id-bg{
+    border: solid #80808026 1px;
+    height:24px;
+    width:24px;
+    text-align:center;
+    margin-bottom: 0rem;
+    
+}
+.status-unpaid{
+    font-weight:bold;
+    color:#FF0000;
+}
+.loans-table th{
+
+  font-size:12px;
+    padding: 1.5rem 0 1rem 2rem;
+    border-bottom: solid #DBD5D5 1px;
+}
+.row-btn-edit{
+    width: 57px;
+    background-color:#6CCA5D;
+    border-radius:4px;
+    border: solid #80808026 1px;
+    margin-right:0.5rem;
+    display:flex;
+    color:white; 
+    font-weight:700;
+    padding-top:0.3rem;
+}
+.row-btn-delete{
+    height:29px;
+    width: 75px;
+    background-color:#ff9d08;
+    border-radius:4px;
+    border: solid #80808026 1px;
+    display:flex;
+    color:white; 
+    font-weight:700;
+    padding-top:0.3rem;
+}
+.row-btn-img{
+    height:20px;
+    margin-top:-1px;
+}
+
+.row-btn-img-edit{
+    height:20px;
+    margin-top:-3px;
+}
+.title-page{
+    font-size:15px;
+    font-weight:600;
+    padding-left:1rem;
+}
+
+span{
+    color:#A19999;
+    font-size:15px;
+}
+
+
+.page-title-pagination{
+    display:flex;
+    width:100%;
+}
+.div-title-page{
+    float:left;
+        width: 50%;
+}
+.pagination{
+    display:flex;
+    justify-content:end;
+    padding-right:1rem;
+    width: 50%;
+    margin-top: -10px;
+}
+.pagination-count{
+    font-size:12px;
+    font-weight:600;
+    margin-top:12px;
+    padding-right:1rem;
+}
+.pagination-bg{
+    background-color:white;
+    height:40px;
+    width:40px;
+    padding:4px 0 0 9px;
+    margin-right:0.8rem;
+    border: solid #80808026 1px;
+}
+.loans-pagination-img{
+    height:19px;
+}
+.btn-add-loans{
+    background-color: #3B5ABB;
+    border: solid #80808026 1px;
+    color: white;
+    font-size: 12px;
+    height: 28px;
+    margin: 0.4rem 1rem 0 2rem;
+    padding: 0 1rem 0 1rem;
+}
+        

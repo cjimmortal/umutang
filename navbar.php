@@ -1,25 +1,34 @@
-<div class="navbar">    
-    <a class="navbar-box"><img class="navbar-icons"  src="assets/menu.png"><p class="navbar-title">Dashboard</p></a>
+<div class="navbar" id="navbar">    
+    <a class="navbar-box"><img class="navbar-icons" onclick="closetab()" src="assets/menu.png"><p class="navbar-title">Dashboard</p></a>
     <div class="navbar-side-contents">
         <div class="navbar-side-box">
             <img class="navbar-admin-img" src="assets/2X2_1X1_ID_PIC_2022.png">
             <p class="navbar-side-name">Welcome, Cj Carpon</p>
-            <img class="navbar-admin-img-dropdwon" src="assets/dropdown.png">
+            <img class="navbar-admin-img-dropdwon" onclick="openProfileNav()" src="assets/dropdown.png">
         </div>
         <!-- <button class="navbar-button"><img class="navbar-side-icons"  src="assets/logout.png">Logout</button> -->
     </div>
 </div>
+<!-- <div class="profile-nav" id="profile-nav">
+
+</div> -->
+
+<script>
+    function openProfileNav() {
+        $('#profile-nav').css("display","none");
+    }
+</script>
 
 <style>
    .navbar{
-    background-color:#254094;
-    height:50px;
-    margin-left:300px;
-    
-    position: fixed;
+    background-color: #254094;
+    height: 50px;
+    margin-left: 300px;
+    position: sticky;
     top: 0;
     z-index: 1000;
-    width: 100%;
+    transition: margin-left 0.5s;
+    
    } 
    .navbar-icons{
         height:20px;
@@ -37,7 +46,7 @@
     padding-top:-8px;
    }
    .navbar-side-contents{
-        flaot:right;
+        float:right;
         display:flex;
    }
    .navbar-side-icons{
@@ -73,6 +82,16 @@
    .navbar-admin-img-dropdwon{
     height:15px;
     margin: 10px 1rem 0 0.5rem;
+   }
+   .profile-nav{
+    height: 161px;
+    width: 210px;
+    background-color: blue;
+    float: right;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    z-index: 1000;
    }
    
 </style>
