@@ -5,11 +5,11 @@
     <div class="modules-box">
         <a href="dashboard.php" class="moduless"><img class="sidebar-icons"  src="assets/dashboard.png">Dashboard</a>
         <a class="moduless"><img class="sidebar-icons"  src="assets/quickadd.png">Quick Add <img class="sidebar-dropdown"  src="assets/dropdown.png"></a>
-            <a  class="under-moduless" data-toggle="modal" data-target="#addLoansModal">Loans</a>
             <a class="under-moduless" data-toggle="modal" data-target="#addBorrowerModal">Borrower</a>
+            <a  class="under-moduless" data-toggle="modal" data-target="#addLoansModal">Loans</a>
             <a class="under-moduless" data-toggle="modal" data-target="#addExpensesModal">Expenses</a>
-        <a href="loans.php" class="moduless"><img class="sidebar-icons"  src="assets/loans.png">Loans</a>
         <a href="borrowers.php" class="moduless"><img class="sidebar-icons"  src="assets/customer-icon.png">Borrowers</a>
+        <a href="loans.php" class="moduless"><img class="sidebar-icons"  src="assets/loans.png">Loans</a>
         <a href="expenses.php" class="moduless"><img class="sidebar-icons"  src="assets/expenses.png">Expenses</a>
         <a href="#" class="moduless"><img class="sidebar-icons"  src="assets/REPORTS.png">Reports</a>
 

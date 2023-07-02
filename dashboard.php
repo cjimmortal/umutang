@@ -1,3 +1,9 @@
+<?php 
+include 'access.php'; loginSuccess();
+include 'connection/dbconn.php';
+include 'class/class.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,25 +33,45 @@
                     <div class="dashboard-bg-icons" style="background-color:#FFA11B;">
                         <img class="dashboard-icons" src="assets/loans.png">
                     </div>
-                        <div class="dashboard-container">
-                            <p class="dashboard-title">Loans</p>
-                            <p class="dashboard-quantity">50</p>
-                        </div>
-                            <div class="dashboard-go-icons-div" >
+
+                        <?php
+                            $displayLoanCount = new display();
+                            $displayLoanCount->displayLoansCount();
+                        ?>
+                           
+                            <div id="redirectLoan" class="dashboard-go-icons-div" >
                                 <img class="dashboard-go-icons" src="assets/arrow-right.png">
                             </div>
                 </div>
             </div>
+               <!-- borrowers -->
+               <div class="d-box col-sm-3">
+                <div class="d-container">
+                    <div class="dashboard-bg-icons" style="background-color:#254094;">
+                        <img class="dashboard-icons" src="assets/customer-icon.png">
+                    </div>
+
+                        <?php
+                            $displayBorrowersCount = new display();
+                            $displayBorrowersCount->displayBorrowersCount();
+                        ?>
+                        
+                            <div id="redirectBorrowers" class="dashboard-go-icons-div" >
+                                <img class="dashboard-go-icons" src="assets/arrow-right.png">
+                            </div>
+                </div>
+            </div> 
             <!-- revenue -->
             <div class="d-box col-sm-3">
                 <div class="d-container">
                     <div class="dashboard-bg-icons" style="background-color:#6CCA5D;">
                         <img class="dashboard-icons" src="assets/revenue.png">
                     </div>
-                        <div class="dashboard-container">
-                            <p class="dashboard-title">Revenue</p>
-                            <p class="dashboard-quantity">50</p>
-                        </div>
+                        <?php
+                            $displayRevenueCount = new display();
+                            $displayRevenueCount->displayRevenueCount();
+                        ?>
+                
                             <div class="dashboard-go-icons-div" >
                                 <img class="dashboard-go-icons" src="assets/arrow-right.png">
                             </div>
@@ -57,30 +83,18 @@
                     <div class="dashboard-bg-icons" style="background-color:#3A3A3A;">
                         <img class="dashboard-icons" src="assets/expenses.png">
                     </div>
-                        <div class="dashboard-container">
-                            <p class="dashboard-title">Expenses</p>
-                            <p class="dashboard-quantity">50</p>
-                        </div>
-                            <div class="dashboard-go-icons-div" >
+
+                        <?php
+                            $displayExpensesCount = new display();
+                            $displayExpensesCount->displayExpensesCount();
+                        ?>
+                        
+                            <div id="redirectExpenses" class="dashboard-go-icons-div" >
                                 <img class="dashboard-go-icons" src="assets/arrow-right.png">
                             </div>
                 </div>
             </div>
-            <!-- borrowers -->
-            <div class="d-box col-sm-3">
-                <div class="d-container">
-                    <div class="dashboard-bg-icons" style="background-color:#254094;">
-                        <img class="dashboard-icons" src="assets/customer-icon.png">
-                    </div>
-                        <div class="dashboard-container">
-                            <p class="dashboard-title">Borrowers</p>
-                            <p class="dashboard-quantity">50</p>
-                        </div>
-                            <div class="dashboard-go-icons-div" >
-                                <img class="dashboard-go-icons" src="assets/arrow-right.png">
-                            </div>
-                </div>
-            </div> 
+         
         </div>
 
         <div class="una-row-data"> 
@@ -91,37 +105,18 @@
                         
                     <table class="loans-table">
                         <tr>
-                            <th>#ID</th>
+                            <th>#</th>
                             <th>Borrower</th>
                             <th>Amount</th>
                             <th>Fee</th>
                             <th>Status</th>
                             <th>Date</th>
                         </tr>
-                        <tr> 
-                            <td>1</td>
-                            <td style="font-weight:bold">Cj Carpon</td>
-                            <td>1000</td>
-                            <td>20</td>
-                            <td>Unpaid</td>
-                            <td>January 6, 2023</td>
-                        </tr>
-                        <tr> 
-                            <td>1</td>
-                            <td style="font-weight:bold">Andrea Lim</td>
-                            <td>1000</td>
-                            <td>20</td>
-                            <td>Unpaid</td>
-                            <td>January 6, 2023</td>
-                        </tr>
-                        <tr> 
-                            <td>1</td>
-                            <td style="font-weight:bold">Gimel Garan</td>
-                            <td>1000</td>
-                            <td>20</td>
-                            <td>Unpaid</td>
-                            <td>January 6, 2023</td>
-                        </tr>
+                        <?php
+                        $displayLatestLoan = new display();
+                        $displayLatestLoan->displayLatestLoans();
+                        ?>
+
                        
                         
                         
@@ -135,33 +130,16 @@
                         
                     <table class="expenses-table">
                     <tr>
-                            <th>#ID</th>
+                            <th>#</th>
                             <th>Amount</th>
                             <th>Description</th>
                             <th>Status</th>
                             <th>Date</th>
                         </tr>
-                        <tr> 
-                            <td>1</td>
-                            <td>1000</td>
-                            <td>Graduation pic</td>
-                            <td>Unpaid</td>
-                            <td>January 6, 2023</td>
-                        </tr>
-                        <tr> 
-                            <td>1</td>
-                            <td>1000</td>
-                            <td>Graduation pic</td>
-                            <td>Unpaid</td>
-                            <td>January 6, 2023</td>
-                        </tr>
-                        <tr> 
-                            <td>1</td>
-                            <td>1000</td>
-                            <td>Graduation pic</td>
-                            <td>Unpaid</td>
-                            <td>January 6, 2023</td>
-                        </tr>
+                    <?php
+                    $displayLatestExpenses = new display();
+                    $displayLatestExpenses->displayLatestExpenses();
+                    ?>  
                         
                        
                     </table>
@@ -188,22 +166,16 @@
                         <p class="dashboard-title-2">New Borrowers</p>
                         
                     <table class="expenses-table">
-                    <tr>
+                    <tr>    
+                            <th>#</th>
                             <th>Name</th>
                             <th>Date</th>
                         </tr>
-                        <tr> 
-                            <td style="font-weight:bold">Cj Carpon</td>
-                            <td>January 6, 2023</td>
-                        </tr>
-                        <tr> 
-                            <td style="font-weight:bold">Cj Carpon</td>
-                            <td>January 6, 2023</td>
-                        </tr>
-                        <tr> 
-                            <td style="font-weight:bold">Cj Carpon</td>
-                            <td>January 6, 2023</td>
-                        </tr>
+                        <?php
+                        $displayLatestBorrowers = new display();
+                        $displayLatestBorrowers->displayLatestBorrowers();
+                        ?> 
+                       
                         
                        
                     </table>
@@ -216,6 +188,7 @@
     </div>
 </body>
 </html>
+<script src="js/main.js"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script>
 google.charts.load('current', {'packages':['corechart']});
@@ -223,12 +196,9 @@ google.charts.setOnLoadCallback(drawChart);
 
 function drawChart() {
 const data = google.visualization.arrayToDataTable([
-  ['Contry', 'Mhl'],
-  ['Italy',55],
-  ['France',49],
-  ['Spain',44],
-  ['USA',24],
-  
+  ['Contry', 'Borrowed'],
+  <?php $displayTopBorrower = new display();
+  $displayTopBorrower->displayTopBorrowers(); ?>
   
 ]);
 
@@ -274,21 +244,11 @@ const chart = new google.visualization.BarChart(document.getElementById('myChart
         padding:1rem 0 0 0;
         
     }
-    
-    .dashboard-loans{
 
-    }
-    .dashboard-expenses{
-        
-    }
-    .dashboard-borrowers{
-        
-    }
     .d-loans-content{
         background-color:white;
         border: solid #80808026 1px;
-
-
+        border-radius:0.5rem;
     }
     
     .d-expenses-content, .d-borrowers-content{
@@ -297,11 +257,13 @@ const chart = new google.visualization.BarChart(document.getElementById('myChart
 
         height:100%;
         max-height:300px;
+        border-radius:0.5rem;
     }
     .dashboard-title-2{
         font-size:15px;
         padding: 1.5rem 0 1rem 1rem;
         border-bottom: solid #DBD5D5 1px;
+        font-weight: 600;
         
     }
 

@@ -1,7 +1,7 @@
-<footer id="footer">
+<!-- <footer id="footer">
     <p class="footer-text">Cjimmortal | All Rights Preserved</p>
 
-</footer>
+</footer> -->
 <style>
     footer{
         width:100%;

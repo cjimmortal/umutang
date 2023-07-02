@@ -6,7 +6,9 @@
             <p class="navbar-side-name">Welcome, Cj Carpon</p>
             <img class="navbar-admin-img-dropdwon" onclick="openProfileNav()" src="assets/dropdown.png">
         </div>
-        <!-- <button class="navbar-button"><img class="navbar-side-icons"  src="assets/logout.png">Logout</button> -->
+        <a href="logout.php">
+            <button class="navbar-button"><img class="navbar-side-icons"  src="assets/logout.png">Logout</button>
+        </a>
     </div>
 </div>
 <!-- <div class="profile-nav" id="profile-nav">
@@ -16,6 +18,7 @@
 <script>
     function openProfileNav() {
         $('#profile-nav').css("display","none");
+
     }
 </script>
 
